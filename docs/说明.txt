@@ -1,1 +1,13 @@
 找到了system_prompt
+
+
+/Users/liyc/Desktop/MiroTrain/convert_to_dpo2.py 修后的convert
+
+/Users/liyc/Desktop/MiroTrain/convert_to_dpo_confirm.py 确认格式正常
+
+cd recipes
+torchrun \
+  --nproc_per_node 8 \
+  --nnodes 1 \
+  dpo_trainer.py \
+  --config ./configs/qwen3/8B_full_dpo.yaml

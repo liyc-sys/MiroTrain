@@ -10,7 +10,7 @@ enable_activation_offloading: False  # True reduces memory
 # Tokenizer
 tokenizer:
   _component_: mirotrain.models.qwen3.qwen3_tokenizer_auto
-  path: /pfs/training-data/hf/models/Qwen/Qwen3-8B
+  path: /workspace/math_science_data/lyc/models/DR-Tulu-8B
   max_seq_len: 32768
 
 # Dataset
@@ -27,13 +27,12 @@ model:
 
 checkpointer:
   _component_: torchtune.training.FullModelHFCheckpointer
-  checkpoint_dir: /pfs/training-data/hf/models/Qwen/Qwen3-8B
+  checkpoint_dir: /workspace/math_science_data/lyc/models/DR-Tulu-8B
   checkpoint_files: [
-    model-00001-of-00005.safetensors,
-    model-00002-of-00005.safetensors,
-    model-00003-of-00005.safetensors,
-    model-00004-of-00005.safetensors,
-    model-00005-of-00005.safetensors,
+    model-00001-of-00004.safetensors,
+    model-00002-of-00004.safetensors,
+    model-00003-of-00004.safetensors,
+    model-00004-of-00004.safetensors,
   ]
   recipe_checkpoint: null
   output_dir: ${output_dir}
@@ -44,13 +43,12 @@ resume_from_checkpoint: False
 # The ref_checkpointer should always point to the original weights.
 ref_checkpointer:
   _component_: torchtune.training.FullModelHFCheckpointer
-  checkpoint_dir: /pfs/training-data/hf/models/Qwen/Qwen3-8B
+  checkpoint_dir: /workspace/math_science_data/lyc/models/DR-Tulu-8B
   checkpoint_files: [
-    model-00001-of-00005.safetensors,
-    model-00002-of-00005.safetensors,
-    model-00003-of-00005.safetensors,
-    model-00004-of-00005.safetensors,
-    model-00005-of-00005.safetensors,
+    model-00001-of-00004.safetensors,
+    model-00002-of-00004.safetensors,
+    model-00003-of-00004.safetensors,
+    model-00004-of-00004.safetensors,
   ]
   recipe_checkpoint: null
   output_dir: ${output_dir}
