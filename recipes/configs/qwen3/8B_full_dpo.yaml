@@ -1,4 +1,4 @@
-output_dir: /pfs/training-out
+output_dir: /workspace/math_science_data/lyc/1205/MiroTrain/output/8B_DPO_run1
 
 # Parallelism
 ulysses_sequence_parallel_size: 1
