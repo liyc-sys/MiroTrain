@@ -16,8 +16,10 @@ tokenizer:
 # Dataset
 dataset:
   _component_: torchtune.datasets.preference_dataset
-  source: "argilla/ultrafeedback-binarized-preferences-cleaned"
-  split: "train"
+  source: json
+  data_files: /workspace/math_science_data/lyc/1205/MiroTrain/dpo_dataset.jsonl
+  train_on_input: False
+  split: train
 seed: 1024
 shuffle: True
 
